@@ -1,1 +1,18 @@
 @import "assets/css/reset.css";
+@import "assets/css/grid.css";
+@import "assets/css/card.css";
+
+* {
+    box-sizing: border-box;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+
+

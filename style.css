@@ -5,6 +5,9 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    font-family: 'Raleway', sans-serif;
+}
 
 .display-flex {
     display: flex;

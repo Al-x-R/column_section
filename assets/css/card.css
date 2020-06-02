@@ -1,70 +1,116 @@
-.card {
+#features {
+    padding: 80px 0;
+}
+
+.feature {
     max-width: 340px;
     width: 100%;
     overflow: hidden;
     margin: 0 auto 50px;
     display: block;
 }
-.icon {
+
+.feature-icon {
     display: flex;
     justify-content: center;
 }
-.icon svg{
+
+.feature-icon svg {
     color: #e84545;
     width: 60px;
     height: 60px;
 }
-.card-title {
+
+.feature-title {
     padding: 30px 0 20px;
+    height: 20px;
     font-size: 20px;
     text-transform: uppercase;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
+
+.feature-title:empty::before {
+    content: 'Feature title';
+}
+
 .feature-content {
     text-align: center;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
+.feature-description {
+    --lines-count: 3;
+    --line-height-value: 1.5em;
+
+    display: -webkit-box;
+    -webkit-line-clamp: var(--lines-count);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    min-height: calc(var(--line-height-value) * var(--lines-count));
+    max-height: calc(var(--line-height-value) * var(--lines-count));
+}
+
+
 @media screen and (max-width: 1200px) {
-    .card {
+    .feature {
         min-width: 250px;
         width: 100%;
         max-height: 220px;
     }
+
+    .feature-description {
+        padding-top: 10px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    .card {
+    .feature {
         min-width: 250px;
         width: 100%;
         max-height: 200px;
     }
+
+    .feature-description {
+        padding-top: 10px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .card {
+    .feature {
         max-width: 760px;
         width: 100%;
         max-height: 200px;
     }
+
+    .feature-description {
+        padding-top: 10px;
+    }
 }
 
 @media screen and (max-width: 372px) {
-    .card {
+    .feature {
         max-width: 270px;
         width: 100%;
         max-height: 170px;
         margin: 0 auto 20px;
     }
-    .icon svg{
+
+    .feature-icon svg {
         color: #e84545;
         width: 45px;
         height: 45px;
     }
-    .card-title {
+
+    .feature-title {
         padding: 15px 0 10px;
         font-size: 15px;
     }
-    .description {
+
+    .feature-description {
         font-size: 12px;
+        padding-top: 10px;
     }
 }
